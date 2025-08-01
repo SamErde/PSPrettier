@@ -1,7 +1,7 @@
 # Module created by Microsoft.PowerShell.Crescendo
 # Version: 1.1.0
 # Schema: https://aka.ms/PowerShell/Crescendo/Schemas/2021-11
-# Generated at: 08/01/2025 07:08:28
+# Generated at: 08/01/2025 07:25:20
 class PowerShellCustomFunctionAttribute : System.Attribute {
     [bool]$RequiresElevation
     [string]$Source
@@ -134,7 +134,7 @@ BEGIN {
                ParameterType = 'string'
                ApplyToExecutable = $False
                NoGap = $False
-               ArgumentTransform = '[string[]]@('error','warn','info','debug')'
+               ArgumentTransform = '[string[]]@(''error'',''warn'',''info'',''debug'')'
                ArgumentTransformType = 'inline'
                }
          Parser = @{
@@ -144,7 +144,7 @@ BEGIN {
                ParameterType = 'string'
                ApplyToExecutable = $False
                NoGap = $False
-               ArgumentTransform = '[string[]]@('babel','typescript','json','json5','css','scss','less','html','vue','yaml','markdown','graphql','mdx','handlebars','angular','lwc')'
+               ArgumentTransform = '[string[]]@(''babel'',''typescript'',''json'',''json5'',''css'',''scss'',''less'',''html'',''vue'',''yaml'',''markdown'',''graphql'',''mdx'',''handlebars'',''angular'',''lwc'')'
                ArgumentTransformType = 'inline'
                }
          Plugin = @{
@@ -154,7 +154,7 @@ BEGIN {
                ParameterType = 'string'
                ApplyToExecutable = $False
                NoGap = $False
-               ArgumentTransform = '[string[]]@('@prettier/plugin-xml','prettier-plugin-tailwindcss','prettier-plugin-organize-imports')'
+               ArgumentTransform = '[string[]]@(''@prettier/plugin-xml'',''prettier-plugin-tailwindcss'',''prettier-plugin-organize-imports'')'
                ArgumentTransformType = 'inline'
                }
          TabWidth = @{
