@@ -1,0 +1,118 @@
+{
+    "$schema": "https://aka.ms/PowerShell/Crescendo/Schemas/2021-11",
+    "Commands": [
+        {
+            "Verb": "Invoke",
+            "Noun": "Prettier",
+            "OriginalName": "prettier",
+            "Description": "Format files using Prettier",
+            "Examples": [
+                {
+                    "Title": "Basic usage",
+                    "Command": "prettier",
+                    "Usage": "Invoke-Prettier -Path .\\file.js -Write",
+                    "Description": "Formats the specified file in-place using Prettier."
+                }
+            ],
+            "Parameters": [
+                {
+                    "Name": "Path",
+                    "OriginalName": "",
+                    "Description": "File(s) or directory to format",
+                    "Position": 0,
+                    "Required": true,
+                    "ValueFromPipeline": true,
+                    "ValueFromPipelineByPropertyName": true,
+                    "ParameterType": "string"
+                },
+                {
+                    "Name": "Write",
+                    "OriginalName": "--write",
+                    "Description": "Edit files in-place",
+                    "ParameterType": "switch"
+                },
+                {
+                    "Name": "Check",
+                    "OriginalName": "--check",
+                    "Description": "Check if files are formatted",
+                    "ParameterType": "switch"
+                },
+                {
+                    "Name": "Config",
+                    "OriginalName": "--config",
+                    "Description": "Path to a Prettier configuration file",
+                    "ParameterType": "string"
+                },
+                {
+                    "Name": "IgnorePath",
+                    "OriginalName": "--ignore-path",
+                    "Description": "Path to .prettierignore file",
+                    "ParameterType": "string"
+                },
+                {
+                    "Name": "LogLevel",
+                    "OriginalName": "--loglevel",
+                    "Description": "Log level (error, warn, info, debug)",
+                    "ParameterType": "string",
+                    "ArgumentTransform": "[string[]]@('error','warn','info','debug')"
+                },
+                {
+                    "Name": "Parser",
+                    "OriginalName": "--parser",
+                    "Description": "Parser to use (babel, typescript, json, html, etc.)",
+                    "ParameterType": "string",
+                    "ArgumentTransform": "[string[]]@('babel','typescript','json','json5','css','scss','less','html','vue','yaml','markdown','graphql','mdx','handlebars','angular','lwc')"
+                },
+                {
+                    "Name": "Plugin",
+                    "OriginalName": "--plugin",
+                    "Description": "Add a plugin (e.g., @prettier/plugin-xml)",
+                    "ParameterType": "string",
+                    "ArgumentTransform": "[string[]]@('@prettier/plugin-xml','prettier-plugin-tailwindcss','prettier-plugin-organize-imports')"
+                },
+                {
+                    "Name": "TabWidth",
+                    "OriginalName": "--tab-width",
+                    "Description": "Number of spaces per indentation level",
+                    "ParameterType": "int"
+                },
+                {
+                    "Name": "UseTabs",
+                    "OriginalName": "--use-tabs",
+                    "Description": "Indent with tabs instead of spaces",
+                    "ParameterType": "switch"
+                },
+                {
+                    "Name": "SingleQuote",
+                    "OriginalName": "--single-quote",
+                    "Description": "Use single quotes instead of double quotes",
+                    "ParameterType": "switch"
+                },
+                {
+                    "Name": "Semi",
+                    "OriginalName": "--no-semi",
+                    "Description": "Do not print semicolons at the ends of statements",
+                    "ParameterType": "switch"
+                },
+                {
+                    "Name": "PrintWidth",
+                    "OriginalName": "--print-width",
+                    "Description": "Line length that Prettier will wrap on",
+                    "ParameterType": "int"
+                },
+                {
+                    "Name": "Stdin",
+                    "OriginalName": "--stdin",
+                    "Description": "Read input from stdin",
+                    "ParameterType": "switch"
+                }
+            ],
+            "OutputHandlers": [
+                {
+                    "ParameterSetName": "Default",
+                    "Handler": "Write-Output $args[0]"
+                }
+            ]
+        }
+    ]
+}
