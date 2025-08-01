@@ -2,7 +2,7 @@
 
 ## Reporting a Vulnerability
 
-If you discover a vulnerability in PSPreworkout, please follow the _following process_:
+If you discover a vulnerability in PSPreworkout, please follow the _process_:
 
 1. Open a generic bug issue advising you have discovered a vulnerability.
    - Avoid sharing specifics or details of the vulnerability in an open GitHub issue.
